@@ -3,5 +3,7 @@ export class SuperGalacticAgeCalculator{
 
   };
 
-
+  multipleAge(age, decimal){
+    return age * decimal;
+  }
 };
