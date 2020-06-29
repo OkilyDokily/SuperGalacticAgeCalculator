@@ -13,4 +13,14 @@ describe('SuperGalacticAgeCalculator', () => {
 
     expect(sgac.multipleAge(4, 1.5)).toEqual(6);
   });
+
+  test('should correctly multiply age according to planet', () => {
+    let sgac = new SuperGalacticAgeCalculator()
+
+
+    expect(sgac.mercuryAge(4)).toEqual(4 * .24);
+    expect(sgac.venusAge(4)).toEqual(4 * .62);
+    expect(sgac.marsAge(4)).toEqual(4 * 1.88);
+    expect(sgac.jupiterAge(4)).toEqual(4 * 11.86);
+  });
 });
