@@ -23,4 +23,12 @@ describe('SuperGalacticAgeCalculator', () => {
     expect(sgac.marsAge(4)).toEqual(4 * 1.88);
     expect(sgac.jupiterAge(4)).toEqual(4 * 11.86);
   });
+
+  test('return', () => {
+    let sgac = new SuperGalacticAgeCalculator()
+
+
+    expect(sgac.multipleAge(4, 1.5)).toEqual(6);
+  });
+
 });

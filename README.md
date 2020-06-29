@@ -1,5 +1,5 @@
 
-# _RPG_
+# _Super Galactic Age Calculator_
 
 #### _This demonstrates knowledge of JavaScript and Jest._
 
@@ -9,32 +9,20 @@
 ## Description
 
 _A page demonstrates basic ES6 and Jest knowledge_
-_Page determines if soduku values are valid_
+_Page gives user info about their age on different planets including life expectancy_
 
-## Spec
- | Spec                                                              | Input                                             | Output                                                                   |
-|-------------------------------------------------------------------|---------------------------------------------------|--------------------------------------------------------------------------|
-| create new Character                                              | new Character                                     | Character{health: 20,level:1,exppoints: 0,gold: 0, weapon: 3}            |
-| create an enemy                                                   | new Enemy                                         | Enemy{ gold: 5, health: 10}                                              |
-| add experience points after each attack                           | battle.attack                                     | Character{XP:0 + 1}                                                      |
-| automatically level up when exp points go up by 100,              | if (exppoints > level * 100)                      | Character{exppoints: 101, level: 0 +1} increase health to 20 + 5 etc.... |
-| create a battle Object                                            | new Battle                                        | Battle{}                                                                 |
-| determine if player has won battle                                |                                                   |                                                                          |
-| if player wins battle extract gold from player                    | ifWon()                                           | Character{gold:0 + 5}                                                    |
-| create a battle system                                            |                                                   |                                                                          |
-| roll die and whoever gets the higher value wins                   | battle.RollDie()                                  | user and monster both roll a die if equal the monster wins               |
-| decrease health according to monster or user hit value            | battle.decreaseHealth(character)                  | Character{health: 20 - 3}                                                |
-| apply defense to enemy hit value                                  | battle.decreaseCharacterHealth                    | Character{health: 20 - (3 - defense value)}                              |
-| create a Store Object                                             | new Store{}                                       | Store {items:[club:15, shield: 24,sword: 27] }                           |
-| create a buy function on store objects                            | store.buy(club)                                   | add club to users inventory                                              |
-| let character equip item bought from store                        | character.equip("item")                           | apply boosts from equipped item.                                         |
-| let hearts be applied immediately without being equipped          | store.buy(heart)                                  | Character{health: ++}                                                    |
-| prevent character from buying item already owned                  | store.buy("sword")                                | nothing happens if already owned.                                        |
-| prevent character from equipping an item that is already equipped | character.equip("sword")                          | nothing happens if already equipped.                                     |
-| allow character to unequip an item                                | character.unequip("sword")                        | add sword back to items and unapply boosts                               |
-| prevent user from equipping more than one attack item             | character.equip("shield") character.equip("mace") | prevent from occuring                                                    |
-| limit number of items a character can have to 4.                  | character trys to buy 5 times                     | wont let him/her buy the last time                                       |
-| let character sell items back to store                            | character.sell(item)                              | lose item and gain gold                                                  |                                      
+
+| Spec                                                                                          | input                                   | output    |
+|-----------------------------------------------------------------------------------------------|-----------------------------------------|-----------|
+| create galactic calculator object                                                             | new GalacticCalculator                  | {}        |
+| create a method that takes an age and decimal value and multiplies them                       | 44, 1.5                                 | 66        |
+| create a mercury method that calls the first method with an inputted age and .24              | 44                                      | 44 *.24   |
+| create a venus method that calls the first method with an inputted age and .62                | 44                                      | 44 * .62  |
+| create a mars method that calls the first method with an inputted age and 1.88                | 44                                      | 44 * 1.88 |
+| create a jupiter method that calls the first method with an inputted age and 11.86            | 44                                      | 44 *11.86 |
+| create a method that takes in a life expectancy value and age and then returns the difference | 44,88                                   | 44        |
+| create a method that determines life expectancy                                               | birth sex country -- exercize etc maybe |           |
+| create methods that determines life expectancy for each planet                                |                                         |           |           
 ## Setup/Installation Requirements
 
 Install node and npm. Clone/download the repo and type 'npm install' inside of a terminal windows in the same directory is the the cloned repo.
