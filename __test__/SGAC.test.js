@@ -24,11 +24,11 @@ describe('SuperGalacticAgeCalculator', () => {
     expect(sgac.jupiterAge(4)).toEqual(4 * 11.86);
   });
 
-  test('return', () => {
+  test('return number of years left in life with a given life expectancy and age', () => {
     let sgac = new SuperGalacticAgeCalculator()
 
 
-    expect(sgac.multipleAge(4, 1.5)).toEqual(6);
+    expect(sgac.yearsLeft(10, 15)).toEqual(5);
   });
 
 });

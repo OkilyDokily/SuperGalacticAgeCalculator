@@ -22,4 +22,8 @@ export class SuperGalacticAgeCalculator{
   jupiterAge(age){
     return this.multipleAge(age, 11.86)
   }
+
+  yearsLeft(age, lifeExpectancy){
+    return lifeExpectancy - age;
+  }
 };
