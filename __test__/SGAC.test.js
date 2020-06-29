@@ -26,9 +26,14 @@ describe('SuperGalacticAgeCalculator', () => {
 
   test('return number of years left in life with a given life expectancy and age', () => {
     let sgac = new SuperGalacticAgeCalculator()
-
-
+    
     expect(sgac.yearsLeft(10, 15)).toEqual(5);
+  });
+
+  test('return a life expectancy value for given demographics of sex, developed country and is american', () => {
+    let sgac = new SuperGalacticAgeCalculator()
+    
+    expect(sgac.lifeExpectancy("male",true,true,true)).toEqual(75);
   });
 
 });

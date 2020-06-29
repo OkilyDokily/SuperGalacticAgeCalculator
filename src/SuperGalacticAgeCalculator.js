@@ -26,4 +26,28 @@ export class SuperGalacticAgeCalculator{
   yearsLeft(age, lifeExpectancy){
     return lifeExpectancy - age;
   }
+
+  lifeExpectancy(sex, developed, isAmerican, exercisesRegularly){
+    if(isAmerican){
+      developed = true;
+    }
+    let total = 0;
+
+    if (sex === "male"){
+      total += 70;
+    }
+    else if(sex === "female"){
+      total += 80;
+    }
+    if(!developed && !isAmerican){
+      total -= 15
+    }
+    if(isAmerican){
+      total -= 5;
+    }
+    if(exercisesRegularly){
+      total += 10;
+    }
+    return total;
+  }
 };
