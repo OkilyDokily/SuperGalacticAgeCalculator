@@ -11,7 +11,7 @@ describe('SuperGalacticAgeCalculator', () => {
     let sgac = new SuperGalacticAgeCalculator()
 
 
-    expect(sgac.multipleAge(4, 1.5)).toEqual(6);
+    expect(sgac.multiplyAge(4, 1.5)).toEqual(6);
   });
 
   test('should correctly multiply age according to planet', () => {
