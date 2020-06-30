@@ -36,4 +36,13 @@ describe('SuperGalacticAgeCalculator', () => {
     expect(sgac.lifeExpectancy("male",true,true,true)).toEqual(75);
   });
 
+  test('return a years of life left for given demographics on different planets', () => {
+    let sgac = new SuperGalacticAgeCalculator()
+    let age = 30;
+    let lifeExpectancy = sgac.lifeExpectancy("male",true,true,true)
+    expect(sgac.mercuryLifeLeft(lifeExpectancy, age)).toEqual(45 * .24);
+    expect(sgac.venusLifeLeft(lifeExpectancy, age)).toEqual(45 * .62);
+    expect(sgac.marsLifeLeft(lifeExpectancy, age)).toEqual(45 * 1.88);
+    expect(sgac.jupiterLifeLeft(lifeExpectancy, age)).toEqual(45 * 11.86);
+  });
 });

@@ -50,4 +50,24 @@ export class SuperGalacticAgeCalculator{
     }
     return total;
   }
+
+  mercuryLifeLeft(lifeExpectancy, age){
+    let difference = lifeExpectancy - age;
+    return this.multipleAge(difference, .24);
+  }
+
+  venusLifeLeft(lifeExpectancy, age){
+    let difference = lifeExpectancy - age;
+    return this.multipleAge(difference, .62)
+  }
+
+  marsLifeLeft(lifeExpectancy, age){
+    let difference = lifeExpectancy - age;
+    return this.multipleAge(difference, 1.88)
+  }
+
+  jupiterLifeLeft(lifeExpectancy, age){
+    let difference = lifeExpectancy - age;
+    return this.multipleAge(difference, 11.86)
+  }
 };
