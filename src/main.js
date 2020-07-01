@@ -4,7 +4,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
-
 $(document).ready(function(){
   $("#howold").click(function(e){
     e.preventDefault();
@@ -47,6 +46,5 @@ $(document).ready(function(){
     else{
       $("#results").text("Please specify your age, the planet, and a gender");
     }
-    
   });
 });
