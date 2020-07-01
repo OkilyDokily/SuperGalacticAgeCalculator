@@ -1,26 +1,27 @@
 export class SuperGalacticAgeCalculator{
   constructor(){
-  this.ageFunctions = {"mercury":this.mercuryAge,"venus":this.venusAge,"mars":this.marsAge,"jupiter":this.jupiterAge}
-  };
-
+    this.ageFunctions = {"mercury":this.mercuryAge,"venus":this.venusAge,"mars":this.marsAge,"jupiter":this.jupiterAge};
+    this.lifeExpectancyFunctions = {"mercury":this.mercuryLifeLeft,"venus":this.venusLifeLeft,"mars":this.marsLifeLeft,"jupiter":this.jupiterLifeLeft};
+  }
+  
   multiplyAge(age, decimal){
     return age * decimal;
   }
 
   mercuryAge(age){
-    return this.multiplyAge(age, .24)
+    return this.multiplyAge(age, .24);
   }
 
   venusAge(age){
-    return this.multiplyAge(age, .62)
+    return this.multiplyAge(age, .62);
   }
 
   marsAge(age){
-    return this.multiplyAge(age, 1.88)
+    return this.multiplyAge(age, 1.88);
   }
 
   jupiterAge(age){
-    return this.multiplyAge(age, 11.86)
+    return this.multiplyAge(age, 11.86);
   }
 
   yearsLeft(age, lifeExpectancy){
@@ -58,16 +59,17 @@ export class SuperGalacticAgeCalculator{
 
   venusLifeLeft(lifeExpectancy, age){
     let difference = lifeExpectancy - age;
-    return this.multiplyAge(difference, .62)
+    return this.multiplyAge(difference, .62);
   }
 
   marsLifeLeft(lifeExpectancy, age){
     let difference = lifeExpectancy - age;
-    return this.multiplyAge(difference, 1.88)
+    return this.multiplyAge(difference, 1.88);
   }
 
   jupiterLifeLeft(lifeExpectancy, age){
     let difference = lifeExpectancy - age;
-    return this.multiplyAge(difference, 11.86)
+    return this.multiplyAge(difference, 11.86);
   }
-};
+
+}
