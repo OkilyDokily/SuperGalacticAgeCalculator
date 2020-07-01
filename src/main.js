@@ -13,10 +13,13 @@ $(document).ready(function(){
     let planet = $("input[name='planet']:checked").val();
     let ageFunction = sgac.ageFunctions[planet];
     
-   
-
-    let result = ageFunction.call(sgac,age);
-    $("#results").text(result);
+    if(!(isNaN(age)) && !(planet == undefined)){
+      let result = ageFunction.call(sgac,age);
+      $("#results").text(result);
+    }
+    else{
+      $("#results").text("Please specify an age and pick a planet");
+    }
   });
 
   $("#lifeleft").click(function(e){
@@ -24,19 +27,21 @@ $(document).ready(function(){
     let sgac = new SuperGalacticAgeCalculator();
     let age = parseInt($("#age").val());
     let planet = $("input[name='planet']:checked").val();
-   
-    let lifeExpectancyFunction = sgac.lifeExpectancyFunctions[planet];
-
+    
     let gender = $("input[name='gender']:checked").val();
-   
     let isDeveloped = $("input[name='developed']").is(':checked');
- 
     let isAmerican = $("input[name='american']").is(':checked');
-
     let doesExercize = $("#input[exercize]").is(':checked');
-    let lifeExpectancy = sgac.lifeExpectancy(gender,isDeveloped, isAmerican, doesExercize);
-    let result = lifeExpectancyFunction.call(sgac,lifeExpectancy ,age);
-    $("#results").text(result);
-    debugger;
+    
+    if(!(isNaN(age)) && !(planet == undefined) && !(gender== undefined)){
+      let lifeExpectancy = sgac.lifeExpectancy(gender,isDeveloped, isAmerican, doesExercize);
+      let lifeExpectancyFunction = sgac.lifeExpectancyFunctions[planet];
+      let result = lifeExpectancyFunction.call(sgac,lifeExpectancy ,age);
+      $("#results").text(result);
+    }
+    else{
+      $("#results").text("Please specify your age, the planet, and a gender");
+    }
+    
   });
 });
