@@ -34,6 +34,7 @@ describe('SuperGalacticAgeCalculator', () => {
     let sgac = new SuperGalacticAgeCalculator()
     
     expect(sgac.lifeExpectancy("male",true,true,true)).toEqual(75);
+  
   });
 
   test('return a years of life left for given demographics on different planets', () => {

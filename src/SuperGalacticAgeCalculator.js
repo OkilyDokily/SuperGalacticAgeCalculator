@@ -41,7 +41,7 @@ export class SuperGalacticAgeCalculator{
       total += 80;
     }
     if(!developed && !isAmerican){
-      total -= 15
+      total -= 15;
     }
     if(isAmerican){
       total -= 5;
